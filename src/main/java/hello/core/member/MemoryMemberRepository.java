@@ -9,6 +9,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public void save(Member member) {
+
         store.put(member.getId(), member);
     }
 
@@ -19,6 +20,7 @@ public class MemoryMemberRepository implements MemberRepository {
 
     @Override
     public Member findById(Long memberId) {
+
         return store.get(memberId);
     }
 }
