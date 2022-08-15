@@ -5,6 +5,11 @@ public class MemberServiceImpl implements MemberService{
 
     private final MemberRepository memberRepository;
 
+    //테스트 용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
+
     public MemberServiceImpl(MemberRepository memberRepository) { //생성자 주입.추상화 의존
         this.memberRepository = memberRepository;
     }
@@ -18,4 +23,6 @@ public class MemberServiceImpl implements MemberService{
     public Member findMember(Long memberId) {
         return memberRepository.findById(memberId);
     }
+
+
 }
